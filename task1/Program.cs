@@ -8,9 +8,10 @@ int number = int.Parse(Console.ReadLine());
 void NumberCounter (int number)
 {
     if (number < 0) Console.Write($"{number} не натуральное число");
-    if (number == 0) return;
-    Console.Write(number);
-    NumberCounter (number - 1);
+    for (int i = 1; i <= number; i++)
+    {
+       Console.Write(i);
+    }
 }
 
 NumberCounter(number);
