@@ -1,11 +1,8 @@
 ﻿// Найти сумму цифр числа
 
-int N=44451;
-int sum=0;
-
-while (N!=0)
+int SumNumber(int n)
 {
-    sum+=N%10;
-    N/=10;
+    if (n/10==0) return n;
+    return SumNumber(n/10) +n%10;
 }
-Console.WriteLine(sum);
+Console.WriteLine(SumNumber(222));
