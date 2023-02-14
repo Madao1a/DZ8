@@ -1,8 +1,9 @@
 ﻿// Показать натуральные числа от M до N, N и M заданы
 
-int M = 11;
-int N = 22;
-for (int i = M; i <= N; i++)
+void NumberCounter(int M, int N)
 {
-    Console.WriteLine(i);
+    if (N<M) return;
+    NumberCounter(M,N-1);
+    Console.Write(N + " ");
 }
+NumberCounter(1,10);
